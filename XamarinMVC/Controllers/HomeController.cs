@@ -26,5 +26,18 @@ namespace XamarinMVC.Controllers
 
             return View();
         }
+
+        public ActionResult TallennaEnnatys(int? id)
+        {
+            if (id.HasValue)
+            {
+                int arvaustenMäärä = id.Value;
+
+                // TODO: tallennus tietokantaan
+            }
+
+            var ok = new { success = true };
+            return Json(ok, JsonRequestBehavior.AllowGet);
+        }
     }
 }
